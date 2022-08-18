@@ -1,0 +1,5 @@
+@font-face {
+    font-family: "LcdD";
+    src: url("../font/DS-DIGII.ttf") format("ttf"), local("LcdD"),
+        url("../font/DS-DIGII.ttf");
+}
