@@ -10,22 +10,18 @@
         }}</span>
     </div>
     <div class="time">
-      <Time/>
-      <!-- <weather /> -->
+      <!-- <weather class="weather" /> -->
+      <Time class="date" />
     </div>
-    <!-- <el-menu :default-active="activeIndex" class="el-menu-demo menu" mode="horizontal" @select="handleSelect">
-      <el-menu-item index="1" path="index">首页</el-menu-item>
-      <el-menu-item index="3">消息中心</el-menu-item>
-      <el-menu-item index="4"> 订单管理</el-menu-item>
-    </el-menu> -->
   </div>
 
 </template>
 <script>
 import weather from '@/layout/components/weather'
 import Time from '@/layout/components/time'
+import Time1 from './time.vue'
 export default {
-  components: { weather,Time },
+  components: { weather, Time, Time1 },
   name: "TabTop",
   data() {
     return {
@@ -86,6 +82,15 @@ export default {
   .time {
     flex: 2;
     border: 1px solid red;
+    display: flex;
+
+    .date {
+      flex: 2;
+    }
+
+    .weather {
+      flex: 1;
+    }
   }
 }
 </style>
