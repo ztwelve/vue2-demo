@@ -1,0 +1,2 @@
+webpackJsonp([0],{DWK5:function(e,t){},JXTs:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"index"},[this._v("\n    Index page\n")])},staticRenderFns:[]};var a=n("VU/8")({},s,!1,function(e){n("DWK5")},"data-v-c1db87b8",null);t.default=a.exports}});
+//# sourceMappingURL=0.363bdf4454c14f510334.js.map
