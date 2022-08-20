@@ -1,6 +1,6 @@
 <template>
   <div class="tabtop">
-    <div class="logo">
+    <div class="logo side">
       <img style="width: 100%; height: 100%" src="@/assets/images/title-logo.png">
     </div>
     <div class="menu">
@@ -9,7 +9,7 @@
             item.label
         }}</span>
     </div>
-    <div class="time">
+    <div class="time side">
       <!-- <weather class="weather" /> -->
       <Time class="date" />
     </div>
@@ -19,9 +19,8 @@
 <script>
 import weather from '@/layout/components/weather'
 import Time from '@/layout/components/time'
-import Time1 from './time.vue'
 export default {
-  components: { weather, Time, Time1 },
+  components: { weather, Time },
   name: "TabTop",
   data() {
     return {
@@ -53,19 +52,24 @@ export default {
   }
 }
 
+.side {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: saturate(150%) conreast(100%) blur(8px);
+  -webkit-backdrop-filter: saturate(150%) contrast(100%) blur(5px);
+  background-color: rgba(0, 0, 0, .3);
+}
+
 .tabtop {
   display: flex;
-  padding: 10px;
-
   .logo {
     flex: 2;
+    padding: 10px;
   }
 
   .menu {
     flex: 6;
-    margin-left: 10px;
     display: flex;
-    border: 1px solid red;
     align-items: center;
     justify-content: space-around;
 
@@ -81,8 +85,8 @@ export default {
 
   .time {
     flex: 2;
-    border: 1px solid red;
     display: flex;
+    padding: 10px;
 
     .date {
       flex: 2;

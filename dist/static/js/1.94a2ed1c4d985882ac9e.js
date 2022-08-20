@@ -1,2 +1,0 @@
-webpackJsonp([1],{"/6cs":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"manage"})},staticRenderFns:[]};var s=n("VU/8")({},a,!1,function(e){n("CFI6")},"data-v-04bb576f",null);t.default=s.exports},CFI6:function(e,t){}});
-//# sourceMappingURL=1.94a2ed1c4d985882ac9e.js.map
