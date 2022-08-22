@@ -4,5 +4,7 @@ router.beforeEach((to, from, next) => {
     if (to.path == '/') {
         next({ name: "Index" })
     }
-    next()
+    else if (to.path != from.path) {
+        next()
+    }
 })
