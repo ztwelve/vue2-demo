@@ -1,0 +1,1 @@
+export const stat = [{ name: '使用', value: 600 }, { name: "剩余", value: 400 }]

@@ -3,7 +3,7 @@
     <div class="header">
       <div class="title">
         <i class="el-icon-full-screen" style="color: rgb(24, 254, 254); font-size: 24px"></i>
-        <span class="text">标题1</span>
+        <span class="text">{{title}}</span>
       </div>
       <div class="line">
         <span class="left"></span>
@@ -18,13 +18,20 @@
 </template>
 <script>
 export default {
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  }
 
 }
 </script>
 <style lang="scss" scoped>
 .box {
   .header {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+
     .title {
       padding: 2px 5px;
       display: flex;
@@ -33,6 +40,8 @@ export default {
       .text {
         margin-left: 5px;
         color: #eceded;
+        font-size: 12px;
+        font-family: '行楷';
       }
     }
 
@@ -57,6 +66,10 @@ export default {
         background-color: rgb(24, 254, 254);
       }
     }
+  }
+  .content{
+    height: calc(100% - 28px);
+    padding: 5px;
   }
 }
 </style>

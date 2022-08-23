@@ -62,6 +62,7 @@ export default {
 
 .tabtop {
   display: flex;
+
   .logo {
     flex: 2;
     padding: 10px;
