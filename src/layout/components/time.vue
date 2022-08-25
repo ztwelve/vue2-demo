@@ -43,19 +43,19 @@ export default {
   height: 100%;
   color: #fff;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
 
   .date {
+    flex: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }
 
 .boxDay {
   font-size: 12px;
-  color: #86898b
+  color: #86898b;
 }
 
 .boxTime {
@@ -63,6 +63,10 @@ export default {
   margin: 0 15px;
   font-family: 'LcdD';
   font-weight: 600;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .boxDate {

@@ -22,7 +22,6 @@ export default {
         temp: "",
         name: "阴"
       },
-      imgUrl: ""
     }
   },
   mounted() {
@@ -37,8 +36,6 @@ export default {
         console.log("data", data)
         that.wdata.temp = data.temperature
         that.wdata.name = data.weather
-        that.imgUrl = `../../assets/images/weather/${that.wdata.name}.png`
-        console.log("that.imgUrl ", that.imgUrl)
       });
     }).catch(e => {
       console.log(e);
