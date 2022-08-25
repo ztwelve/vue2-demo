@@ -10,7 +10,7 @@
         }}</span>
     </div>
     <div class="time side">
-      <!-- <weather class="weather" /> -->
+      <weather class="weather" />
       <Time class="date" />
     </div>
   </div>
@@ -90,7 +90,7 @@ export default {
     padding: 10px;
 
     .date {
-      flex: 2;
+      flex: 1;
     }
 
     .weather {
