@@ -6,7 +6,7 @@
     <div class="menu">
       <span :style="route == item.value ? 'color:#fff' : 'color:#6c6e71'" v-for="item in menus" :key="item.value"
         @click="handleMenu(item.value)">{{
-            item.label
+         item.label 
         }}</span>
     </div>
     <div class="time side">
@@ -55,13 +55,14 @@ export default {
 .side {
   width: 100%;
   height: 100%;
-  backdrop-filter: saturate(150%) conreast(100%) blur(8px);
-  -webkit-backdrop-filter: saturate(150%) contrast(100%) blur(5px);
-  background-color: rgba(0, 0, 0, .3);
+
 }
 
 .tabtop {
   display: flex;
+  backdrop-filter: saturate(150%) conreast(100%) blur(8px);
+  -webkit-backdrop-filter: saturate(150%) contrast(100%) blur(5px);
+  background-color: rgba(0, 0, 0, .3);
 
   .logo {
     flex: 2;

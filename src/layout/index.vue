@@ -21,10 +21,13 @@ export default {
   display: flex;
   flex-direction: column;
   .top{
-    flex: 1;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 999;
   }
   .content{
-    flex: 13;
+    height: 100%;
   }
 }
 

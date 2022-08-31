@@ -1,12 +1,13 @@
 <template>
   <div class="weather">
     <div class="icon">
-      <img style="height:100%;width:100%;color:aliceblue" :src="require(`../../assets/images/weather/${wdata.name}.png`)" alt="">
+      <img style="height:100%;width:100%;color:aliceblue"
+        :src="require(`../../assets/images/weather/${wdata.name}.png`)" alt="">
 
     </div>
     <div class="text">
-      <span class="temp">{{ wdata.temp }} <span class="unit">℃</span> </span>
-      <span class="name">{{ wdata.name }}</span>
+      <span class="temp">{{  wdata.temp  }} <span class="unit">℃</span> </span>
+      <span class="name">{{  wdata.name  }}</span>
     </div>
   </div>
 </template>
@@ -22,24 +23,37 @@ export default {
         temp: "",
         name: "阴"
       },
+      timer: null
     }
   },
   mounted() {
-    const that = this
-    AMapLoader.load({
-      key: "fcb203bdac5a2a7e1a25ba4f4d4bb18e",  // 申请好的Web端开发者Key，首次调用 load 时必填
-      version: "2.0",   // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-      plugins: ['AMap.Weather'],   // 需要使用的的插件列表，如比例尺'AMap.Scale'等
-    }).then((AMap) => {
-      let weather = new AMap.Weather();
-      weather.getLive('杭州市', function (err, data) {
-        console.log("data", data)
-        that.wdata.temp = data.temperature
-        that.wdata.name = data.weather
-      });
-    }).catch(e => {
-      console.log(e);
-    })
+    this.initMap()
+    this.timer = setInterval(() => {
+      this.initMap()
+    }, 1000 * 60 * 60 * 2)
+  },
+  destroyed() {
+    clearInterval(this.timer)
+    this.timer = null
+  },
+  methods: {
+    initMap() {
+      const that = this
+      AMapLoader.load({
+        key: "fcb203bdac5a2a7e1a25ba4f4d4bb18e",  // 申请好的Web端开发者Key，首次调用 load 时必填
+        version: "2.0",   // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
+        plugins: ['AMap.Weather'],   // 需要使用的的插件列表，如比例尺'AMap.Scale'等
+      }).then((AMap) => {
+        let weather = new AMap.Weather();
+        weather.getLive('杭州市', function (err, data) {
+          console.log("data", data)
+          that.wdata.temp = data.temperature
+          that.wdata.name = data.weather
+        });
+      }).catch(e => {
+        console.log(e);
+      })
+    }
   }
 }
 </script>
